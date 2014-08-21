@@ -51,10 +51,12 @@ proto.create = function(members, _super) {
         alpha.prototype[_superName] = {};
         for (prop in _super) {
                 // if is function and has been overwritten
-            if ((typeof _super[prop] === 'function' && _super[prop] !== alpha.prototype[prop]) ||
-                // or if is super object of this super object :P
-                (typeof _super[prop] === 'object' && /\$[a-z0-9]+/i.test(prop))) {
+            if (typeof _super[prop] === 'function' && _super[prop] !== alpha.prototype[prop]) {
                 alpha.prototype[_superName][prop] = _super[prop];
+            }
+            // or if is super object of this super object :P
+            else if (typeof _super[prop] === 'object' && /\$[a-z0-9]+/i.test(prop)) {
+                alpha.prototype[prop] = _super[prop];
             }
         }
     }
@@ -81,7 +83,7 @@ try {
 } catch(e) {
     try {
         define([], proto);
-    } catch() {
+    } catch(e) {
         window.proto = proto;
     }
 }
