@@ -1,19 +1,19 @@
 {
-  "name": "proto",
+  "name": "protos",
   "version": "1.0.0",
-  "description": "proto =====",
-  "main": "proto.js",
+  "description": "a library for creating inheritable js objects",
+  "main": "protos.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/c-concat-p/proto"
+    "url": "https://github.com/c-concat-p/protos"
   },
   "author": "Chris Peters",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/c-concat-p/proto/issues"
+    "url": "https://github.com/c-concat-p/protos/issues"
   },
-  "homepage": "https://github.com/c-concat-p/proto"
+  "homepage": "https://github.com/c-concat-p/protos"
 }
